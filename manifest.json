@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Ads-only feed for Facebook",
+    "version": "1.0.0",
+    "description": "Track competitors and got inpsired from others ads, using an ads-only feed.",
+    "author": "OmerB",
+    "permissions": [
+        "activeTab",
+        "http://facebook.com/*",
+        "https://facebook.com/*",
+        "https://www.facebook.com/*",
+        "http://www.facebook.com/*"
+    ],
+    "icons" : {
+        "16" : "assets/icons/16.png",
+        "32" : "assets/icons/32.png",
+        "64" : "assets/icons/64.png",
+        "128" : "assets/icons/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.facebook.com/*"
+            ],
+            "css":[
+                "assets/css/main.css"
+            ],
+            "js": [
+                "main/cs/handleFb.js",
+                "main/cs/utils.js",
+                "main/cs/main.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
