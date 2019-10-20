@@ -6,23 +6,30 @@
     "author": "OmerB",
     "permissions": [
         "activeTab",
+        "tabs",
+        "storage",
         "http://facebook.com/*",
         "https://facebook.com/*",
         "https://www.facebook.com/*",
         "http://www.facebook.com/*"
     ],
-    "icons" : {
-        "16" : "assets/icons/16.png",
-        "32" : "assets/icons/32.png",
-        "64" : "assets/icons/64.png",
-        "128" : "assets/icons/128.png"
+    "browser_action": {
+        "default_icon": "assets/icons/regular.png"
+    },
+    "icons": {
+        "128": "assets/icons/regular.png"
+    },
+    "background": {
+        "scripts": [
+            "main/bg/background.js"
+        ]
     },
     "content_scripts": [
         {
             "matches": [
                 "*://*.facebook.com/*"
             ],
-            "css":[
+            "css": [
                 "assets/css/main.css"
             ],
             "js": [

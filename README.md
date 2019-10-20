@@ -1,1 +1,1 @@
-# Ads-only feed for facebook - Chrome extension
+# Adblock for facebook - Chrome extension

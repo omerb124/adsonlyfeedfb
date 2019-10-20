@@ -5,15 +5,15 @@
  */
 var handleInsertedNewPost = (postElement) => {
     // Check if post element is an advertisement
-    if(!isPostAnAd(postElement)){
+    if(isPostAnAd(postElement)){
         // Hide it
-        console.log(postElement);
         setTimeout(() => {
-            postElement.className += " afrf_notad";
+            postElement.className += " afrf_ad";
         },100);
+        console.log("It's an ad.");
         
     } else {
-        console.log("It's an ad.");
+       
     }
 
 };
